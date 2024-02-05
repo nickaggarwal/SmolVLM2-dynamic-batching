@@ -2,20 +2,20 @@ INPUT_SCHEMA = {
     "prompt": {
         'datatype': 'STRING',
         'required': True,
-        'shape': [1,1],
-        'example': [["There is a fine house in the forest"]]
+        'shape': [2,1],
+        'example': [["There is a fine house in the forest"],["There is a fine house in the river"]]
     },
     'negative_prompt': {
         'datatype': 'STRING',
         'required': False,
-        'example': [["test"]],
-        'shape': [1,1]
+        'example': [["test"], ["test"]],
+        'shape': [2,1]
     },
     'width': {
         'datatype': 'INT8',
         'required': False,
-        'example': [[ 768 ,  512 ]],
-        'shape': [1,2]
+        'example': [[ 768 ,  512 ], [ 768 ,  512 ]],
+        'shape': [2,2]
     },
 }
 BATCH_SIZE = 2
