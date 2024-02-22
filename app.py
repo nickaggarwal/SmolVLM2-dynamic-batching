@@ -17,7 +17,7 @@ class InferlessPythonModel:
     def infer(self, inputs):
         output = []
         for each in inputs:
-            prompt = inputs["prompt"]
+            prompt = each["prompt"]
             pipeline_output = self.generator(prompt, do_sample=True, min_length=20)
             generated_txt = pipeline_output[0]["generated_text"]
             output.append({"generated_text": generated_txt })
