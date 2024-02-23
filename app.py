@@ -20,6 +20,7 @@ class InferlessPythonModel:
             prompt = each["prompt"]
             pipeline_output = self.generator(prompt, do_sample=True, min_length=20)
             generated_txt = pipeline_output[0]["generated_text"]
+            print("generated_txt", generated_txt, flush=True)
             output.append({"generated_text": generated_txt })
         return output
 
