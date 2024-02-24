@@ -18,5 +18,5 @@ INPUT_SCHEMA = {
         'shape': [2]
     },
 }
-BATCH_SIZE = 2
+BATCH_SIZE = 4
 BATCH_WINDOW = 50000
