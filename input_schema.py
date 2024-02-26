@@ -19,3 +19,4 @@ INPUT_SCHEMA = {
     },
 }
 BATCH_SIZE = 4
+BATCH_DELAY = 1000
