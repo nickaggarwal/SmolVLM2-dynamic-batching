@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 import json
 import numpy as np
 import torch
@@ -8,7 +11,9 @@ class InferlessPythonModel:
 
     # replace ##task_type## and ##huggingface_name## with appropriate values
     def initialize(self):
-        self.generator = pipeline("text-generation", model="EleutherAI/gpt-neo-125M",device=0)
+        model_id = "EleutherAI/gpt-neo-125M"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
+        self.generator = pipeline("text-generation", model=model_id,device=0)
 
     # inputs is a list of dictonary where the keys are input names and values are actual input data
     # e.g. in the below code the input name is prompt 
