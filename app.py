@@ -87,9 +87,8 @@ class InferlessPythonModel:
                     os.unlink(video_path)
                     
             except Exception as e:
-                error_msg = f"Error processing video: {str(e)}"
                 print(error_msg, flush=True)
-                output.append({"error": error_msg})
+                output.append({"error": "Could not process input"})
         
         return output
     
