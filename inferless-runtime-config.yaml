@@ -1,12 +1,15 @@
 build:
   cuda_version: "12.1.1"
   python_packages:
-    - "accelerate==0.34.2"
-    - "torch==2.4.1"
-    - "transformers==4.44.2"
-    - "hf-transfer==0.1.9"
-    - "huggingface-hub==0.27.1"
+    - "accelerate"
+    - "torch==2.5.0"
+    - "torchvision==0.20.0"
+    - "transformers==4.51.2"
+    - "hf-transfer"
+    - "huggingface-hub==0.30.1"
+    - "num2words"
     - "decord"  # Required for video processing
     - "opencv-python-headless"  # For fallback video processing if needed
     - "requests"  # For downloading videos from URLs
     - "pillow"  # Image processing utilities
+    - "numpy"  # Added for array operations
