@@ -13,5 +13,6 @@ build:
     - "requests"  # For downloading videos from URLs
     - "pillow"  # Image processing utilities
     - "numpy"  # Added for array operations
+    - "av"
   run:
     - "pip install flash-attn --no-build-isolation"
