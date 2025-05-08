@@ -39,7 +39,7 @@ class InferlessPythonModel:
         
         for each in inputs:
             prompt = each.get("text", "Describe the video" )
-            video_url = each.get("video_url", "https://file-examples.com/wp-content/storage/2017/04/file_example_MP4_640_3MG.mp4")
+            video_url = each.get("video_url", "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")
             
             try:
                 # Download the video if it's a URL
