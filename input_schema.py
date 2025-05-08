@@ -5,11 +5,11 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': ["Describe the video"],
     },
-    "video_file": {
+    "video_url": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["https://file-examples.com/wp-content/storage/2017/04/file_example_MP4_640_3MG.mp4"],
+        'example': ["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"],
     }
 }
 BATCH_SIZE = 4
